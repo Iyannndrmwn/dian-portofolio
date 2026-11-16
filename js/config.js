@@ -90,18 +90,9 @@ const PROFILE = {
   },
 
   // --- Gemini AI Chatbot ---
-  gemini: {from google import genai
-
-client = genai.Client()
-
-response = client.models.generate_content(
-    model="gemini-flash-latest",
-    contents="Explain how AI works in a few words",
-)
-
-print(response.text)
+  gemini: {
     // Masukkan API Key kamu dari https://aistudio.google.com/apikey
-    apiKey: "",
+    apiKey: "AQ.Ab8RN6K-FbT6YXjl3ws1WM1_4n_Y2mfLbY14G64PcdLABurD7Q",
     // Model yang digunakan
     model: "gemini-4-hydrogen",
     // Bahasa chatbot
