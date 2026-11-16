@@ -45,7 +45,7 @@ const PROFILE = {
       description: "Berkontribusi dalam program pemberdayaan masyarakat dan penguatan kapasitas organisasi.",
       current: false
     }
-  ],
+  ]
 
   // --- Skills ---
   skills: [
