@@ -104,7 +104,7 @@ const PROFILE = {
   // --- Gemini AI Chatbot ---
   gemini: {
     // Masukkan API Key kamu dari https://aistudio.google.com/apikey
-    apiKey: "",
+    apiKey: "AQ.Ab8RN6K-FbT6YXjl3ws1WM1_4n_Y2mfLbY14G64PcdLABurD7Q",
     // Model yang digunakan
     model: "gemini-4-hydrogen",
     // Bahasa chatbot
