@@ -45,7 +45,7 @@ function renderProfile() {
   setText("infoUniversity", p.university);
   setText("infoProgram", p.program);
   setText("infoSemester", p.semester);
-  setText("infoExpCount", `${p.experiences.length} Posisi`);
+  setText("infoExpCount", `${p.experiences.length} Role`);
   setText("infoSkillCount", `${p.skills.length} Keahlian`);
 
   // Experience Accordion Cards
