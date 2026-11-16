@@ -16,7 +16,7 @@ const PROFILE = {
   // Ganti path ini dengan foto kamu (taruh file di folder assets/img/)
   photo: "assets/img/profile-placeholder.svg",
 
-  // --- Bio / Tentang ---
+  // --- About Me ---
   bio: `Saya seorang mahasiswa teknik semester V dengan program studi D-IV Perkeretaapian 
   di Politeknik Negeri Madiun. Saya memiliki ketertarikan yang besar terhadap dunia 
   engineering — mulai dari desain mekanikal hingga sistem kontrol. Di sisi lain, saya 
