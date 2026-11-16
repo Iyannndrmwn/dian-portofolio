@@ -48,19 +48,69 @@ function renderProfile() {
   setText("infoExpCount", `${p.experiences.length} Posisi`);
   setText("infoSkillCount", `${p.skills.length} Keahlian`);
 
-  // Experience Timeline
+  // Experience Accordion Cards
   const timeline = document.getElementById("timeline");
   if (timeline) {
-    timeline.innerHTML = p.experiences.map(exp => `
-      <div class="timeline-item ${exp.current ? "current" : ""}">
-        <div class="timeline-dot"></div>
-        ${exp.current ? '<span class="timeline-badge">Saat Ini</span>' : ""}
-        <h3 class="timeline-title">${exp.title}</h3>
-        <p class="timeline-org">${exp.organization}</p>
-        <p class="timeline-period">${exp.period}</p>
-        <p class="timeline-desc">${exp.description}</p>
-      </div>
-    `).join("");
+    timeline.className = "experience-accordion";
+    timeline.innerHTML = p.experiences.map((exp, index) => {
+      const hasTasks = exp.tasks && Array.isArray(exp.tasks) && exp.tasks.length > 0;
+      const tasksHtml = hasTasks
+        ? `<ul class="exp-tasks-list">${exp.tasks.map(t => `<li>${t}</li>`).join("")}</ul>`
+        : `<p class="exp-tasks-empty"><em>(Rincian tugas dan tanggung jawab akan segera ditambahkan)</em></p>`;
+
+      const statusBadge = exp.current
+        ? `<span class="exp-badge current"><span class="badge-dot"></span>Sedang Menjabat</span>`
+        : `<span class="exp-badge completed">Selesai Menjabat</span>`;
+
+      return `
+        <div class="exp-card" data-index="${index}">
+          <div class="exp-card-header" role="button" tabindex="0" aria-expanded="false">
+            <div class="exp-meta-row">
+              ${statusBadge}
+              <span class="exp-period">
+                <i data-lucide="calendar" class="exp-meta-icon"></i> ${exp.period}
+              </span>
+            </div>
+            <div class="exp-title-row">
+              <div class="exp-title-group">
+                <span class="exp-bullet">•</span>
+                <h3 class="exp-title">${exp.title}</h3>
+              </div>
+              <div class="exp-toggle-icon">
+                <i data-lucide="chevron-down" class="exp-chevron"></i>
+              </div>
+            </div>
+            <p class="exp-org">${exp.organization}</p>
+          </div>
+          <div class="exp-card-body">
+            <div class="exp-body-inner">
+              ${exp.description ? `<p class="exp-desc"><em>${exp.description}</em></p>` : ""}
+              <h4 class="exp-tasks-title">TANGGUNG JAWAB & TUGAS:</h4>
+              ${tasksHtml}
+            </div>
+          </div>
+        </div>
+      `;
+    }).join("");
+
+    // Accordion Toggle Event Listener
+    const expCards = timeline.querySelectorAll(".exp-card");
+    expCards.forEach(card => {
+      const header = card.querySelector(".exp-card-header");
+      const toggle = () => {
+        const isOpen = card.classList.toggle("open");
+        header.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      };
+      header.addEventListener("click", toggle);
+      header.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          toggle();
+        }
+      });
+    });
+
+    lucide.createIcons({ nameAttr: "data-lucide" });
   }
 
   // Skills

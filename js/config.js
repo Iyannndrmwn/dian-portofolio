@@ -6,7 +6,7 @@ const PROFILE = {
   // --- Info Dasar ---
   name: "Dian Bagus Dermawan",
   nickname: "Dian",
-  tagline: "Engineering Student • Rollingstock Engineering • Fashion Enthusiast",
+  tagline: "Engineering Student • Railway Enthusiast • Fashion Lover",
   university: "Politeknik Negeri Madiun",
   faculty: "Jurusan Teknik",
   program: "D-IV Perkeretaapian",
@@ -17,35 +17,50 @@ const PROFILE = {
   photo: "assets/img/profile-placeholder.svg",
 
   // --- Bio / Tentang ---
-  bio: `Halo kenalin aku Dian Bagus Dermawan, biasa dipanggil Dian. Aku seorang mahasiswa jurusan teknik, program studi D-IV Perkeretaapian 
-  Politeknik Negeri Madiun.
-  Aku memiliki ketertarikan yang besar terhadap dunia engineering mulai dari desain mekanikal hingga sistem kontrol. 
-  Disisi lain, aku juga memiliki ketertarikan di dunia fashion.`,
+  bio: `Saya seorang mahasiswa teknik semester V dengan program studi D-IV Perkeretaapian 
+  di Politeknik Negeri Madiun. Saya memiliki ketertarikan yang besar terhadap dunia 
+  engineering — mulai dari desain mekanikal hingga sistem kontrol. Di sisi lain, saya 
+  juga memiliki passion di dunia fashion yang menjadi sisi kreatif saya.
+  
+  Hal-hal yang tercantum di situs ini merupakan pencapaian yang telah saya raih, 
+  dan akan selalu saya tingkatkan ke depannya.`,
 
-  // --- TRACK RECORD ---
-  Experiences: [
+  // --- Pengalaman ---
+  experiences: [
     {
       title: "Sekretaris II",
       organization: "Himpunan Mahasiswa Jurusan Teknik (HMJT)",
       period: "2026 – 2027",
       description: "Bertanggung jawab dalam administrasi dan koordinasi kegiatan himpunan.",
-      current: true
+      current: true,
+      tasks: [
+        // Kosongi dulu sesuai permintaan Dian.
+        // Nanti jika ingin diisi, cukup tambahkan seperti:
+        // "Mengoordinasikan administrasi dan persuratan himpunan",
+        // "Menjalankan fungsi pengarsipan berkas kegiatan organisasi"
+      ]
     },
     {
       title: "Sekretaris IV",
       organization: "Himpunan Mahasiswa Jurusan Teknik (HMJT)",
       period: "2025 – 2026",
       description: "Mengelola dokumentasi dan mendukung kegiatan organisasi himpunan.",
-      current: false
+      current: false,
+      tasks: [
+        // Kosongi dulu
+      ]
     },
     {
       title: "Anggota Tim Tambak Kreasi",
       organization: "Program Penguatan Kapasitas Organisasi Kemahasiswaan (PPK Ormawa)",
       period: "2025",
       description: "Berkontribusi dalam program pemberdayaan masyarakat dan penguatan kapasitas organisasi.",
-      current: false
+      current: false,
+      tasks: [
+        // Kosongi dulu
+      ]
     }
-  ]
+  ],
 
   // --- Skills ---
   skills: [
@@ -89,7 +104,7 @@ const PROFILE = {
   // --- Gemini AI Chatbot ---
   gemini: {
     // Masukkan API Key kamu dari https://aistudio.google.com/apikey
-    apiKey: "AQ.Ab8RN6K-FbT6YXjl3ws1WM1_4n_Y2mfLbY14G64PcdLABurD7Q",
+    apiKey: "",
     // Model yang digunakan
     model: "gemini-4-hydrogen",
     // Bahasa chatbot
