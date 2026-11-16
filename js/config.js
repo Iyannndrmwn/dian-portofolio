@@ -6,7 +6,7 @@ const PROFILE = {
   // --- Info Dasar ---
   name: "Dian Bagus Dermawan",
   nickname: "Dian",
-  tagline: "Engineering Student • Railway Enthusiast • Fashion Lover",
+  tagline: "Engineering Student • Rollingstock Engineering • Fashion Enthusiast",
   university: "Politeknik Negeri Madiun",
   faculty: "Jurusan Teknik",
   program: "D-IV Perkeretaapian",
@@ -17,16 +17,13 @@ const PROFILE = {
   photo: "assets/img/profile-placeholder.svg",
 
   // --- Bio / Tentang ---
-  bio: `Saya seorang mahasiswa teknik semester V dengan program studi D-IV Perkeretaapian 
-  di Politeknik Negeri Madiun. Saya memiliki ketertarikan yang besar terhadap dunia 
-  engineering — mulai dari desain mekanikal hingga sistem kontrol. Di sisi lain, saya 
-  juga memiliki passion di dunia fashion yang menjadi sisi kreatif saya.
-  
-  Hal-hal yang tercantum di situs ini merupakan pencapaian yang telah saya raih, 
-  dan akan selalu saya tingkatkan ke depannya.`,
+  bio: `Halo kenalin aku Dian Bagus Dermawan, biasa dipanggil Dian. Aku seorang mahasiswa jurusan teknik, program studi D-IV Perkeretaapian 
+  Politeknik Negeri Madiun.
+  Aku memiliki ketertarikan yang besar terhadap dunia engineering mulai dari desain mekanikal hingga sistem kontrol. 
+  Disisi lain, aku juga memiliki ketertarikan di dunia fashion.`,
 
-  // --- Pengalaman ---
-  experiences: [
+  // --- TRACK RECORD ---
+  Experiences: [
     {
       title: "Sekretaris II",
       organization: "Himpunan Mahasiswa Jurusan Teknik (HMJT)",
